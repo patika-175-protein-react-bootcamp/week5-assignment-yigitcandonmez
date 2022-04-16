@@ -37,7 +37,9 @@ export const SignupForm = () => {
         validationSchema={Yup.object({
           firstName: Yup.string().max(15, "Must be 15 characters or less"),
           lastName: Yup.string().max(20, "Must be 20 characters or less"),
-          username: Yup.string().required("Kullanıcı adı zorunludur."),
+          username: Yup.string()
+            .min(3, "En az 3 karakter girebilirsiniz.")
+            .required("Kullanıcı adı zorunludur."),
           email: Yup.string()
             .email("Geçerli bir mail adresi girin.")
             .required("E-posta alanı zorunludur."),

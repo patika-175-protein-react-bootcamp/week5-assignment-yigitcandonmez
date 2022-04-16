@@ -5,7 +5,7 @@ import styles from "./TextInput.module.scss";
 export const TextInput = ({ label, ...props }) => {
   const [field, meta] = useField(props);
   const { isrequired } = props;
-  console.log(meta.error);
+
   return (
     <>
       <div className={styles["text-input"]}>

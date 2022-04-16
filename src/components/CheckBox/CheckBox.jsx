@@ -14,7 +14,7 @@ export const CheckBox = ({ children, ...props }) => {
           {...field}
           {...props}
         />
-        <span class={styles["checkmark"]}></span>
+        <span className={styles["checkmark"]}></span>
         {children}
       </label>
       {meta.touched && meta.error ? (
